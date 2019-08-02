@@ -1,4 +1,17 @@
 /*Cookie consent*/
+button {
+	display: inline-block;
+    border: none;
+    background: #555555;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    border-radius: 6px;
+}
+
 #cookie_consent {
 	display: none;
     background-color: rgba(20,20,20,0.8);

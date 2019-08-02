@@ -1,3 +1,11 @@
+//setCookie and getCookie are from w3schools
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -23,6 +31,7 @@ window.onload = function(){
 		$(".seen_cookie").click(function() {
 			$("#cookie_consent").fadeOut(200);
 			document.cookie = "cookieConsent=seen";
+			setCookie('cookieConsent', 'seen', 365);//You can set a custom expire time according to the cookie policy of your website.
 		}); 
 	}
 	
